@@ -1,0 +1,32 @@
+<div style="padding: 250px;">
+{{ form_start(form,{'attr':{'novalidate': 'novalidate'}}) }}
+
+
+{{ form_label(form.addresse,"adresse de l enfant") }}
+{{ form_widget(form.addresse, {'attr':{'class': 'form-control'}}) }}
+<span style="color:red">{{ form_errors(form.addresse) }}</span>
+
+
+
+{{ form_label(form.dateNais,"Date de naissance enfant") }}
+{{ form_widget(form.dateNais)}}
+<span style="color:red">{{ form_errors(form.dateNais) }}</span>
+
+<span style="color:red"></span>
+{{ form_label(form.gender,"Gender") }}
+{{ form_widget(form.gender)}}
+<span style="color:red">{{ form_errors(form.gender) }}</span>
+
+
+{{ form_label(form.prenom,"prenom de l enfant") }}
+{{ form_widget(form.prenom)}}
+<span style="color:red">{{ form_errors(form.prenom) }}</span>
+
+
+{{ form_label(form.nom,"Nom de l enfant") }}
+{{ form_widget(form.nom)}}
+<span style="color:red">{{ form_errors(form.nom) }}</span>
+
+<button class="btn btn-success" type="submit">{{ button_label|default('ajouter enfant') }}</button>
+{{ form_end(form) }}
+</div>
